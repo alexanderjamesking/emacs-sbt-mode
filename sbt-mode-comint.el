@@ -81,7 +81,7 @@ line of output buffer."
     (setq comint-scroll-to-bottom-on-output sbt:scroll-to-bottom-on-output)
     (setq comint-prompt-regexp sbt:prompt-regexp)
     (setq-local comint-use-prompt-regexp t)
-    (setq-local comint-prompt-read-only t)
+    (setq-local comint-prompt-read-only nil)
     (setq-local comint-buffer-maximum-size 4096)
     (setq-local comint-preoutput-filter-functions '(sbt:move-marker-before-prompt-filter))
     (setq-local comint-output-filter-functions '(ansi-color-process-output comint-postoutput-scroll-to-bottom sbt:move-marker-after-prompt-filter))
